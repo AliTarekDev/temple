@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+// -FONT SIZE SYSTEM (px):
+// 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 /98
+$dangerButton: #c9151b;
+
+html {
+  direction: rtl;
+  height: 5000px;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Cairo", sans-serif !important;
+  background: url("./assets/images/new-background.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.mr-top {
+  margin-top: 4.8rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--template--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btn--full:link,
+.btn--full:visited {
+  display: inline-block;
+  background-color: $dangerButton;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  // padding: 1.6rem 3.2rem;
+  padding: 1rem 4rem;
+  border-radius: 9px;
+
+  transition: all 1s;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  opacity: 0.8;
+  // background-color: transparent;
+  // border: 1px solid #fff;
+}

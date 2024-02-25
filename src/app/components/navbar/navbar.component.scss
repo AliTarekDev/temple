@@ -1,0 +1,76 @@
+@use "../../styles/variables" as *;
+
+nav {
+  background-color: transparent !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .navbar-nav {
+    gap: 1.2rem;
+  }
+
+  .navbar-toggler {
+    &:focus {
+      box-shadow: none;
+    }
+    .toggler-icon {
+      i {
+        color: #fff;
+        font-size: 2.2rem;
+        border: none;
+      }
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        cursor: pointer;
+        color: #fff;
+        font-size: 1.5rem;
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+
+  .external-navbar {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    .navbar-nav {
+      padding-right: 1rem !important;
+    }
+    span {
+      i {
+        font-size: 1.2rem;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .offcanvas-body {
+    .nav-item {
+      .nav-link {
+        color: #222 !important;
+        transition: all 0.5s ease-out;
+        margin-bottom: 1.2rem;
+        &:hover {
+          color: $primaryColor !important;
+        }
+      }
+    }
+  }
+}
