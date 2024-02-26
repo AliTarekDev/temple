@@ -6,13 +6,13 @@ $dangerButton: #c9151b;
 
 html {
   direction: rtl;
-  height: 5000px;
+  // height: 5000px;
   font-size: 62.5%;
 }
 
 body {
   font-family: "Cairo", sans-serif !important;
-  background: url("./assets/images/new-background.png");
+  background: url("./assets/images/photos/background.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -49,4 +49,9 @@ body {
   opacity: 0.8;
   // background-color: transparent;
   // border: 1px solid #fff;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
 }
