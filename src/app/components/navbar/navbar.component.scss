@@ -58,13 +58,21 @@ nav {
       }
     }
   }
+
+  .dropdown {
+    display: flex;
+    align-items: center;
+    img {
+      width: 3rem;
+    }
+  }
 }
 
 @media (max-width: 992px) {
   .offcanvas-body {
     .nav-item {
       .nav-link {
-        color: #222 !important;
+        color: #fff !important;
         transition: all 0.5s ease-out;
         margin-bottom: 1.2rem;
         &:hover {
@@ -72,5 +80,39 @@ nav {
         }
       }
     }
+
+    .search {
+      display: none;
+    }
   }
+
+  .offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 2rem;
+    height: 4rem;
+    align-items: center;
+
+    button {
+      background: none;
+      border: none;
+      i {
+        color: #fff;
+        font-size: 2rem;
+      }
+    }
+    a {
+      width: 50%;
+      text-align: center;
+    }
+    img {
+      width: 50%;
+      text-align: right;
+    }
+  }
+}
+
+::ng-deep .offcanvas.show:not(.hiding),
+.offcanvas.showing {
+  background: #222;
 }

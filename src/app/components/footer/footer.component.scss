@@ -5,7 +5,8 @@ footer {
 
   .footer-container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 1.2rem;
     color: #fff;
 
     h3 {
@@ -15,7 +16,7 @@ footer {
 
     .about-us {
       &-content {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
       }
 
       .more {
@@ -29,7 +30,7 @@ footer {
     .offers {
       &-list {
         li {
-          font-size: 2rem;
+          font-size: 1.2rem;
           margin-bottom: 1.2rem;
           transition: all 0.5s ease-in-out;
           cursor: pointer;
@@ -43,7 +44,7 @@ footer {
     .links {
       &-list {
         li {
-          font-size: 2rem;
+          font-size: 1.2rem;
           margin-bottom: 1.2rem;
           a {
             color: #fff;
@@ -54,6 +55,48 @@ footer {
             }
           }
         }
+      }
+    }
+
+    .contact-list {
+      li {
+        margin-bottom: 1.8rem;
+        .list-box {
+          height: 1.2rem;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          i {
+            color: $footerIconColor;
+            font-size: 1.8rem;
+          }
+          p {
+            margin: 0;
+          }
+        }
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.contact-list-icons {
+  ul {
+    display: flex;
+    gap: 1.2rem;
+  }
+}
+
+.footer-copy {
+  color: #fff;
+  font-size: 1.2rem;
+
+  .copy--right {
+    display: flex;
+    justify-content: space-around;
+    p {
+      .lighter {
+        color: $footerSecondary;
       }
     }
   }

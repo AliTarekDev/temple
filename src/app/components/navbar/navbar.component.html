@@ -23,14 +23,28 @@
       aria-labelledby="offcanvasNavbarLabel"
     >
       <div class="offcanvas-header">
-        <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
+        <!-- <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button> -->
+
+        <button data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <a href="#"><img src="./assets/images/logo.png" alt="logo" /></a>
+      </div>
+      <!-- <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
         <button
           type="button"
           class="btn-close"
           data-bs-dismiss="offcanvas"
           aria-label="Close"
         ></button>
-      </div>
+      </div> -->
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
@@ -62,22 +76,31 @@
                 aria-expanded="false"
                 (click)="toggleDropdown()"
               >
-                العربية
+                {{ selectedLang == "ar" ? "العربية" : "English" }}
               </a>
               <div
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdown"
                 [class.show]="dropdownOpen"
               >
-                <a class="dropdown-item" href="#">العربية</a>
-                <a class="dropdown-item" href="#">English</a>
-                <!-- <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a> -->
+                <a class="dropdown-item" (click)="selectLanguage('ar')"
+                  >العربية</a
+                >
+                <a class="dropdown-item" (click)="selectLanguage('en')"
+                  >English</a
+                >
               </div>
+              <img
+                *ngIf="selectedImage"
+                [src]="selectedImage"
+                alt="Language Image"
+              />
             </li>
+
+            <!-- Image to render based on selection -->
           </ul>
 
-          <span>
+          <span class="search">
             <i class="fa-solid fa-magnifying-glass"></i>
           </span>
         </div>

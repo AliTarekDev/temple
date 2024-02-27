@@ -1,0 +1,33 @@
+.details {
+  .details-main-img {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    max-width: 600px; /* Example max width */
+    margin: auto; /* Center the container */
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 100%; /* Adjust as needed */
+  max-width: 600px; /* Example max width */
+  margin: auto; /* Center the container */
+}
+
+.image-container .main-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.overlay-image {
+  position: absolute;
+  width: auto; /* Adjust based on your needs */
+  height: auto; /* Adjust based on your needs */
+}
+
+.overlay-image img {
+  width: 100%;
+  height: auto;
+}

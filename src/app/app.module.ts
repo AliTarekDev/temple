@@ -11,6 +11,7 @@ import { VirtualRealityComponent } from './components/virtual-reality/virtual-re
 import { DividerComponent } from './components/divider/divider.component';
 import { CitadelComponent } from './components/citadel/citadel.component';
 import { ProjectsPartiesComponent } from './components/projects-parties/projects-parties.component';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ProjectsPartiesComponent } from './components/projects-parties/projects
     DividerComponent,
     CitadelComponent,
     ProjectsPartiesComponent,
+    DetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
