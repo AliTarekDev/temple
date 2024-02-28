@@ -3,18 +3,148 @@
     <div class="details-main-img">
       <img src="./assets/images/tower.png" alt="" />
       <div
-        *ngFor="let image of overlayImages"
+        *ngFor="let image of overlayImages; let i = index"
         [ngStyle]="{
           top: image.top,
           right: image.right ? image.right : 'auto',
           left: image.left ? image.left : 'auto',
-          width: image.width,
+          width: 'auto',
           height: image.height,
           cursor: 'pointer'
         }"
         class="overlay-image"
+        (click)="openModal(image)"
       >
-        <img [src]="image.src" [alt]="image.alt" />
+        <div class="overlay-content">
+          <ng-container *ngIf="!image.svgAfterImage">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100"
+              height="43"
+              viewBox="0 0 210 43"
+              fill="none"
+            >
+              <path
+                d="M0 21.5H176"
+                stroke="#C1976C"
+                stroke-width="5"
+                stroke-dasharray="10 10"
+              />
+              <path
+                d="M188.5 41.5C199.546 41.5 208.5 32.5457 208.5 21.5C208.5 10.4543 199.546 1.5 188.5 1.5C177.454 1.5 168.5 10.4543 168.5 21.5C168.5 32.5457 177.454 41.5 188.5 41.5Z"
+                fill="#CDA073"
+              />
+              <path
+                d="M188.5 41C199.27 41 208 32.2696 208 21.5C208 10.7304 199.27 2 188.5 2C177.73 2 169 10.7304 169 21.5C169 32.2696 177.73 41 188.5 41Z"
+                stroke="#491B1B"
+              />
+              <path
+                d="M190.5 10.33C190.5 9.22543 189.605 8.33 188.5 8.33C187.395 8.33 186.5 9.22543 186.5 10.33V31.67C186.5 32.7746 187.395 33.67 188.5 33.67C189.605 33.67 190.5 32.7746 190.5 31.67V10.33Z"
+                fill="#491B1B"
+              />
+              <path
+                d="M190 10.33C190 9.50157 189.328 8.83 188.5 8.83C187.672 8.83 187 9.50157 187 10.33V31.67C187 32.4984 187.672 33.17 188.5 33.17C189.328 33.17 190 32.4984 190 31.67V10.33Z"
+                stroke="#AA8662"
+              />
+            </svg>
+          </ng-container>
+          <img [src]="image.src" [alt]="image.alt" />
+
+          <ng-container *ngIf="image.svgAfterImage">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100"
+              height="43"
+              viewBox="0 0 210 43"
+              fill="none"
+            >
+              <path
+                d="M209.5 21.5H33.5"
+                stroke="#C1976C"
+                stroke-width="5"
+                stroke-dasharray="10 10"
+              />
+              <path
+                d="M21 41.5C32.0457 41.5 41 32.5457 41 21.5C41 10.4543 32.0457 1.5 21 1.5C9.9543 1.5 1 10.4543 1 21.5C1 32.5457 9.9543 41.5 21 41.5Z"
+                fill="#CDA073"
+              />
+              <path
+                d="M21 41C31.7696 41 40.5 32.2696 40.5 21.5C40.5 10.7304 31.7696 2 21 2C10.2304 2 1.5 10.7304 1.5 21.5C1.5 32.2696 10.2304 41 21 41Z"
+                stroke="#491B1B"
+              />
+              <path
+                d="M23 10.33C23 9.22545 22.1046 8.33002 21 8.33002C19.8954 8.33002 19 9.22545 19 10.33V31.67C19 32.7746 19.8954 33.67 21 33.67C22.1046 33.67 23 32.7746 23 31.67V10.33Z"
+                fill="#491B1B"
+              />
+              <path
+                d="M22.5 10.33C22.5 9.50159 21.8284 8.83002 21 8.83002C20.1716 8.83002 19.5 9.50159 19.5 10.33V31.67C19.5 32.4984 20.1716 33.17 21 33.17C21.8284 33.17 22.5 32.4984 22.5 31.67V10.33Z"
+                stroke="#AA8662"
+              />
+            </svg>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="imageModal"
+    tabindex="-1"
+    aria-labelledby="imageModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog custom-modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-box">
+            <div class="modal-box-content">
+              <h5 class="modal-title" id="imageModalLabel">
+                <span>عرض الاهرامات</span>
+              </h5>
+
+              <p class="modal-box-content-text">
+                احجز تذكرتك في عرض الصوت والضوء لاكتشاف كنوز الماضي و التعرف على
+                .إحدى عجائب الدنيا السبع يحاكي عرض الصوت والضوء قصص الأهرامات
+                الثلاثة خوفو و خفرع و منكاورع و تمثال أبو الهول الذي يعد من أقدم
+                .المنحوتات الضخمة في العالم
+              </p>
+
+              <div class="prices">
+                <h5>
+                  <span class="prices-title">الاسعار</span>
+                </h5>
+
+                <ul class="prices-list">
+                  <li><span class="prices-type">عادية:</span> 80 جنيه مصري</li>
+                  <li><span class="prices-type">Vip:</span> 200 جنيه مصري</li>
+                  <li>
+                    <span class="prices-type">طفل:</span> 45 جنيه مصري من 6 الي
+                    12 سنه
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-box-img">
+              <!-- <img src="" alt=""> -->
+              <img src="./assets/images/citadel.png" class="w-100" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        Close
+      </button>
+    </div> -->
       </div>
     </div>
   </div>

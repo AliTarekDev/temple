@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .details {
   .details-main-img {
     margin: auto;
@@ -28,6 +30,59 @@
 }
 
 .overlay-image img {
-  width: 100%;
+  width: 200px;
   height: auto;
+}
+
+.overlay-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  &-content {
+    margin-top: 1.2rem;
+    .modal-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      span {
+        position: relative;
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          left: -50px;
+          bottom: 10px;
+          width: 5rem;
+          height: 2px;
+          background-color: $textColor;
+        }
+
+        &::after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          right: -50px;
+          bottom: 10px;
+          width: 5rem;
+          height: 2px;
+          background-color: $textColor;
+        }
+      }
+    }
+
+    &-text {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.custom-modal-lg .modal-dialog {
+  max-width: 800px; /* Example for larger fixed width */
+  margin: auto;
 }
