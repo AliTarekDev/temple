@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
 declare var bootstrap: any; // Add this line if bootstrap is not recognized
 
 @Component({
@@ -6,7 +6,13 @@ declare var bootstrap: any; // Add this line if bootstrap is not recognized
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.scss'],
 })
-export class DetailsComponent {
+export class DetailsComponent implements OnInit {
+  constructor(private renderer: Renderer2) {}
+
+  ngOnInit(): void {
+    this.adjustImagePositions();
+  }
+
   overlayImages = [
     {
       src: './assets/images/show-pyramids.png',
@@ -80,5 +86,34 @@ export class DetailsComponent {
 
     const myModal = new bootstrap.Modal(document.getElementById('imageModal'));
     myModal.show();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.adjustImagePositions();
+  }
+  adjustImagePositions() {
+    const width = window.innerWidth;
+    if (width <= 767) {
+      this.overlayImages = this.overlayImages.map((image) => ({
+        ...image,
+        left: image.left == 'auto' ? 'auto' : '-12%',
+        right: image.right == 'auto' ? 'auto' : '-12%',
+      }));
+    } else {
+      this.overlayImages = this.overlayImages.map((image) => ({
+        ...image,
+        left: image.left == 'auto' ? 'auto' : '-5%',
+        right: image.right == 'auto' ? 'auto' : '-5%',
+      }));
+    }
+
+    if (width <= 690) {
+      this.overlayImages = this.overlayImages.map((image) => ({
+        ...image,
+        left: image.left == 'auto' ? 'auto' : '0',
+        right: image.right == 'auto' ? 'auto' : '0',
+      }));
+    }
   }
 }

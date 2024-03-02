@@ -116,3 +116,7 @@ nav {
 .offcanvas.showing {
   background: #222;
 }
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  bottom: -5rem;
+}

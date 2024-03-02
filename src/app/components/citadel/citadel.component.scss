@@ -63,3 +63,27 @@ p {
     transform: translateX(-100px);
   }
 }
+
+@media (max-width: 75em) {
+  .divider {
+    bottom: -40px !important;
+  }
+}
+
+@media (max-width: 66em) {
+  .divider {
+    bottom: -35px !important;
+  }
+}
+
+@media (max-width: 58em) {
+  .divider {
+    bottom: -30px !important;
+  }
+}
+
+@media (max-width: 58em) {
+  .divider {
+    bottom: -25px !important;
+  }
+}

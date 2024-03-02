@@ -16,7 +16,7 @@
         (click)="openModal(image)"
       >
         <div class="overlay-content">
-          <ng-container *ngIf="!image.svgAfterImage">
+          <ng-container class="svg-image" *ngIf="!image.svgAfterImage">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="100"
@@ -50,7 +50,7 @@
           </ng-container>
           <img [src]="image.src" [alt]="image.alt" />
 
-          <ng-container *ngIf="image.svgAfterImage">
+          <ng-container class="svg-image" *ngIf="image.svgAfterImage">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="100"
@@ -97,7 +97,7 @@
   >
     <div class="modal-dialog custom-modal-lg">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="header">
           <button
             type="button"
             class="btn-close"
@@ -133,10 +133,15 @@
                   </li>
                 </ul>
               </div>
+
+              <div class="btns">
+                <a class="btn--full" href="#"> احجز الان </a>
+                <a class="btn--full" href="#"> اقرأ المزيد </a>
+              </div>
             </div>
             <div class="modal-box-img">
               <!-- <img src="" alt=""> -->
-              <img src="./assets/images/citadel.png" class="w-100" alt="" />
+              <img src="./assets/images/pyramids.jpg" class="w-100" alt="" />
             </div>
           </div>
         </div>

@@ -56,3 +56,23 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+@media (max-width: 48em) {
+  .btn--full:link,
+  .btn--full:visited {
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+  }
+
+  .virtual-reality-container-image {
+    align-self: center;
+  }
+}
+
+@media (max-width: 33em) {
+  .btn--full:link,
+  .btn--full:visited {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+}
