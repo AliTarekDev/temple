@@ -83,7 +83,34 @@ p {
 }
 
 @media (max-width: 58em) {
+  .box-content {
+    width: 80% !important;
+    transform: translateX(0) !important;
+    padding: 1.2rem 0;
+    position: relative !important;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
   .divider {
-    bottom: -25px !important;
+    bottom: -35px !important;
+  }
+
+  .img-box {
+    display: none !important;
+  }
+}
+
+@media (max-width: 43em) {
+  p {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 38em) {
+  .divider {
   }
 }

@@ -149,7 +149,7 @@
 
     p,
     a {
-      opacity: 0;
+      opacity: 1;
       transition: all 0.5s ease-in-out;
     }
 
@@ -218,11 +218,27 @@
     justify-content: space-between;
     gap: 2rem;
     padding: 0 1rem;
+
+    p {
+      font-size: 1.2rem !important;
+    }
+
+    .btn--full {
+      font-size: 1.2rem;
+    }
   }
 }
 
 @media (max-width: 48em) {
   h2 {
     font-size: 3rem !important;
+  }
+
+  .light-container {
+    flex-direction: column;
+    p {
+      font-size: 1.8rem !important;
+      margin-top: 2.2rem !important;
+    }
   }
 }
