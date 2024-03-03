@@ -1,76 +1,168 @@
 @use "../../styles/variables" as *;
 
-.request-offers {
-  .img-content {
-    position: relative;
-    img {
-      width: 80rem;
-    }
+// .request-offers {
+//   .img-content {
+//     position: relative;
+//     width: 80%;
+//     margin: auto;
+//     img {
+//       width: 100%;
+//     }
 
-    .img-text {
-      h1 {
-        font-size: 4.8rem;
-      }
+//     .img-text {
+//       h1 {
+//         font-size: 4.8rem;
+//       }
 
-      p {
-        font-size: 1.8rem;
-        margin-top: 2.2rem;
-        line-height: 1.8;
-        font-weight: 700;
-        color: $textColor;
-      }
-      width: 60rem;
-      position: absolute;
-      text-align: center;
-      right: 50%;
-      transform: translateX(50%);
-      top: 3.8rem;
-    }
+//       p {
+//         font-size: 2rem;
+//         margin-top: 2.2rem;
+//         line-height: 1.8;
+//         font-weight: 700;
+//         color: $textColor;
+//       }
+//       width: 60rem;
+//       position: absolute;
+//       text-align: center;
+//       right: 50%;
+//       transform: translateX(50%);
+//       top: 3.8rem;
+//     }
+//   }
+// }
+
+// @media (max-width: 75em) {
+//   .img-text {
+//     h1 {
+//       font-size: 4rem !important;
+//     }
+//     p {
+//       font-size: 1.5rem !important;
+//       line-height: 1.2 !important;
+//       margin-top: 1.2rem !important;
+//     }
+//   }
+// }
+
+// @media (max-width: 62em) {
+//   .img-text {
+//     h1 {
+//       font-size: 3rem !important;
+//     }
+//     p {
+//       font-size: 1.5rem !important;
+//       line-height: 1.2 !important;
+//       margin-top: 1.2rem !important;
+//     }
+//   }
+// }
+
+// @media (max-width: 47em) {
+//   .img-content {
+//     width: 80%;
+
+//     img {
+//       width: 100%;
+//     }
+//   }
+
+//   .img-text {
+//     h1 {
+//       font-size: 2rem !important;
+//     }
+//     p {
+//       font-size: 1.2rem !important;
+//       line-height: 1.2 !important;
+//       margin-top: 1.2rem !important;
+//     }
+//   }
+
+//   .request-offers {
+//     overflow: hidden !important;
+//   }
+// }
+
+// @media (max-width: 34em) {
+//   // .request-offers {
+//   //   overflow: hidden;
+//   // }
+//   .img-text {
+//     h1 {
+//       font-size: 1.5rem !important;
+//     }
+//     p {
+//       font-size: 1.2rem !important;
+//       line-height: 1.2 !important;
+//       margin-top: 0.5rem !important;
+//     }
+//   }
+// }
+
+.request-offer {
+  position: relative;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  h1 {
+    font-size: 4rem;
   }
 }
 
-@media (max-width: 53em) {
-  .img-content {
-    img {
-      width: 60rem !important;
-      padding: 0 1.2rem !important;
-    }
+@media (max-width: 62em) {
+  h1 {
+    font-size: 2rem !important;
   }
-
-  .img-text {
-    width: 40rem !important;
-
-    h1 {
-      font-size: 3.2rem !important;
-    }
-
-    p {
-      font-size: 1.5rem !important;
-      margin-top: 1.2rem !important;
-      line-height: 1.2 !important;
-    }
+  p {
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 38em) {
+@media (max-width: 768px) {
+  .request-offer {
+    width: 80% !important;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .request-offer {
+    width: 100% !important;
+  }
   .img-content {
-    img {
-      width: 50rem !important;
-      // padding: 0 1.2rem !important;
-    }
+    font-size: 14px; /* Adjust font size for even smaller screens */
+  }
+}
+
+@media (max-width: 42em) {
+  p {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 27em) {
+  h1 {
+    font-size: 1.5rem !important;
   }
 
-  .img-text {
-    width: 30rem !important;
-
-    h1 {
-      font-size: 2.8rem !important;
-    }
-
-    p {
-      font-size: 1.2rem !important;
-      margin-top: 1.2rem !important;
-      line-height: 1.2 !important;
-    }
+  p {
+    font-size: 1rem !important;
   }
 }

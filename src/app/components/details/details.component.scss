@@ -185,3 +185,26 @@
     display: none;
   }
 }
+@media (max-width: 27em) {
+  .overlay-content {
+    img {
+      width: 150px !important;
+    }
+  }
+}
+
+@media (max-width: 23em) {
+  .overlay-content {
+    img {
+      width: 125px !important;
+    }
+  }
+}
+
+@media (max-width: 21em) {
+  .overlay-content {
+    img {
+      width: 100px !important;
+    }
+  }
+}
