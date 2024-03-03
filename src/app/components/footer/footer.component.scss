@@ -105,21 +105,22 @@ footer {
 @media (max-width: 62em) {
   .footer-container {
     grid-template-columns: repeat(3, 1fr) !important;
-    // justify-items: flex-end !important;
     gap: 3rem !important;
-  }
-
-  .links {
-    justify-self: start !important;
-  }
-
-  .contact {
-    justify-self: start !important;
   }
 }
 
 @media (max-width: 38em) {
   .footer-container {
-    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .footer-container {
+    .grid-item:first-child {
+      grid-column: span 2;
+    }
+  }
+
+  .copy--right {
+    flex-direction: column;
   }
 }

@@ -180,8 +180,12 @@
   padding: 1rem;
 }
 
+.line {
+  width: 100px !important;
+}
+
 @media (max-width: 43em) {
-  svg {
+  .line {
     display: none;
   }
 }
