@@ -12,6 +12,7 @@ import { DividerComponent } from './components/divider/divider.component';
 import { CitadelComponent } from './components/citadel/citadel.component';
 import { ProjectsPartiesComponent } from './components/projects-parties/projects-parties.component';
 import { DetailsComponent } from './components/details/details.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { DetailsComponent } from './components/details/details.component';
     CitadelComponent,
     ProjectsPartiesComponent,
     DetailsComponent,
+    HomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
