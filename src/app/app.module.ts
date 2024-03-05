@@ -8,11 +8,11 @@ import { RequestOffersComponent } from './components/request-offers/request-offe
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { VirtualRealityComponent } from './components/virtual-reality/virtual-reality.component';
-import { DividerComponent } from './components/divider/divider.component';
 import { CitadelComponent } from './components/citadel/citadel.component';
 import { ProjectsPartiesComponent } from './components/projects-parties/projects-parties.component';
 import { DetailsComponent } from './components/details/details.component';
 import { HomeComponent } from './components/home/home.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,13 +22,12 @@ import { HomeComponent } from './components/home/home.component';
     RequestOffersComponent,
     FooterComponent,
     VirtualRealityComponent,
-    DividerComponent,
     CitadelComponent,
     ProjectsPartiesComponent,
     DetailsComponent,
     HomeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })

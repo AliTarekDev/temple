@@ -1,0 +1,35 @@
+.about-description {
+  color: #fff;
+  &-content {
+    display: flex;
+    &-title {
+      flex-basis: 20%;
+      h3 {
+        font-size: 4.8rem;
+      }
+    }
+
+    &-text {
+      flex-basis: 80%;
+      font-size: 1.8rem;
+      font-weight: 400;
+      h3 {
+        font-weight: 800;
+        margin-bottom: 3rem;
+      }
+
+      p {
+        line-height: 3rem;
+      }
+    }
+  }
+}
+
+.section-title {
+  position: relative;
+  &:after {
+    content: url("../../../../assets/images/frame.png");
+
+    width: 10rem;
+  }
+}
