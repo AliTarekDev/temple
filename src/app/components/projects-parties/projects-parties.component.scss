@@ -414,3 +414,94 @@
     }
   }
 }
+
+@media (max-width: 62em) {
+  .img-box {
+    display: none;
+  }
+
+  .citadel-content-container {
+    display: block;
+  }
+
+  .citadel-parent {
+    transform: translateX(0) !important;
+  }
+
+  .citadel-show-container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .citadel-show {
+    .show-title {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+    .btn--full {
+      font-size: 1rem;
+    }
+  }
+
+  .party-container {
+    margin-top: 0 !important;
+  }
+}
+
+.party-container {
+  margin-top: 2rem;
+}
+
+@media (max-width: 48em) {
+  .citadel-content {
+    h2 {
+      font-size: 3.2rem !important;
+    }
+
+    p {
+      font-size: 2rem !important;
+    }
+  }
+
+  .citadel-show {
+    .show-title {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+    .btn--full {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 28em) {
+  .citadel-show-container {
+    flex-direction: column;
+  }
+  .citadel-show {
+    .show-title {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+    .btn--full {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 20em) {
+  .citadel-content {
+    h2 {
+      font-size: 2.8rem !important;
+    }
+  }
+}

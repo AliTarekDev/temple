@@ -1,5 +1,7 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollService } from 'src/app/services/scroll.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  private scrollSubscription: Subscription = new Subscription();
+  private section2Start: number = 0;
+
   dropdownOpen = false;
   selectedImage: string | null = './assets/images/flags/egypt.png';
 
-  constructor(private eRef: ElementRef) {}
+  constructor(private eRef: ElementRef, private scrollService: ScrollService) {}
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
@@ -22,7 +27,25 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.scrollService.sectionStart$.subscribe((position) => {
+      this.section2Start = position;
+      console.log(position);
+    });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const navbar = document.querySelector('.navbar') as HTMLElement;
+    // const currentScrollPosition = window.scrollY + navbar.offsetHeight;
+    const currentScrollPosition = window.scrollY;
+
+    if (currentScrollPosition >= this.section2Start) {
+      navbar.classList.add('fixed-navbar');
+    } else {
+      navbar.classList.remove('fixed-navbar');
+    }
+  }
 
   images: any = {
     ar: './assets/images/flags/egypt.png',
