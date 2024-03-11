@@ -8,6 +8,7 @@ html {
   direction: rtl;
   // height: 5000px;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -99,4 +100,8 @@ ul {
   &:hover {
     background-color: #fff !important;
   }
+}
+
+.modal {
+  z-index: 99999999 !important;
 }

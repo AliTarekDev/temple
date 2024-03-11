@@ -64,3 +64,16 @@
 .show-text {
   display: block !important;
 }
+
+@media (max-width: 24em) {
+  .about-list {
+    &-item {
+      .details-title {
+        font-size: 2.8rem;
+      }
+      &-text {
+        font-size: 1.2rem !important;
+      }
+    }
+  }
+}

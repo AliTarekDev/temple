@@ -60,3 +60,17 @@
     width: 10rem;
   }
 }
+
+@media (max-width: 24em) {
+  .about-description-content-title {
+    h3 {
+      font-size: 3.8rem;
+    }
+  }
+
+  .about-us-list {
+    &-item {
+      font-size: 1.2rem;
+    }
+  }
+}

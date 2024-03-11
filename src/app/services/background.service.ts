@@ -11,6 +11,7 @@ export class BackgroundService {
     this.document.body.style.background = `url(${bg})`;
     this.document.body.style.backgroundSize = '100%'; // Optional: Cover the entire page
     this.document.body.style.backgroundPosition = '100%'; // Optional: Center the background image
+    // this.document.body.style.backgroundRepeat = 'no-repeat';
   }
 
   resetBodyBackground() {

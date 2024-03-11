@@ -72,7 +72,11 @@ nav {
   position: fixed !important;
   // background-color: rgba(0, 0, 0, 0.5) !important;
   background-color: #000 !important;
+  // background-color: rgba(0, 0, 0, 0.5);
   height: 8rem !important;
+  -webkit-box-shadow: 0 8px 6px -6px gray;
+  -moz-box-shadow: 0 8px 6px -6px gray;
+  box-shadow: 0 8px 6px -6px gray;
 }
 
 @media (max-width: 992px) {
