@@ -51,7 +51,12 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/"
+            <a
+              class="nav-link active"
+              aria-current="page"
+              routerLink="/"
+              routerLinkActive="active-link"
+              [routerLinkActiveOptions]="{ exact: true }"
               >الرئيسية</a
             >
           </li>
@@ -59,13 +64,25 @@
             <a class="nav-link" href="#">العروض</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/about">من نحن</a>
+            <a
+              class="nav-link"
+              routerLink="/about"
+              routerLinkActive="active-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >من نحن</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link">المدونة</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">تواصل معنا</a>
+            <a
+              class="nav-link"
+              routerLink="contact"
+              routerLinkActive="active-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >تواصل معنا</a
+            >
           </li>
         </ul>
 

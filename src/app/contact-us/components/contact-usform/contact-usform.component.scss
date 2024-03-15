@@ -1,0 +1,214 @@
+@use "../../../styles/variables" as *;
+
+.form {
+  color: #fff;
+  &-title {
+    h3 {
+      font-size: 4.8rem;
+    }
+  }
+
+  &-desc {
+    width: 80%;
+    margin-top: 2.8rem;
+    p {
+      color: #fff;
+
+      text-align: right;
+      font-family: "Lama Sans";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px; /* 125% */
+      position: relative;
+      padding-right: 3rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 3px;
+        background-color: $btnColor;
+      }
+    }
+  }
+}
+
+.form-main {
+  margin-top: 2.8rem;
+  border-radius: 50px;
+  border: 0.5px solid $btnColor;
+
+  background: #000;
+
+  box-shadow: -7px 7px 25px 0px rgba(255, 255, 255, 0.25);
+  padding: 0 4rem 0 0;
+  overflow: hidden;
+  &-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2.8rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  &-inputs {
+    padding-top: 4rem;
+    padding-bottom: 0;
+    input,
+    textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: var(--Grey-500, #a4a4a4);
+      text-align: right;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      border-radius: 2rem;
+      padding: 1.6rem;
+      border: 1px solid #fff;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 4.8rem;
+      img {
+        width: 25px;
+      }
+
+      h3 {
+        font-size: 4.8rem;
+      }
+    }
+  }
+
+  &-content {
+    // border-radius: 40px 0px 0px 40px;
+    border-radius: 2rem;
+    background: #0e0e0e;
+  }
+}
+
+.contact-info {
+  &-text {
+    padding: 1.8rem;
+
+    h3 {
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+  }
+
+  &-list {
+    margin-top: 1.8rem;
+    &-item {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 50px;
+      }
+      p {
+        font-size: 1.8rem;
+        // font-weight: 700;
+      }
+    }
+  }
+}
+
+.social-icons {
+  display: flex;
+  gap: 2.2rem;
+  align-items: center;
+  img {
+    width: 50px;
+  }
+}
+
+.section-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  &:after {
+    content: "";
+    display: block;
+    background-image: url("../../../../assets/images/frame.png");
+    background-size: cover; // This will ensure that the background image covers the entire element
+    background-repeat: no-repeat;
+    width: 100%; // Make the :after element take the full width of the .section-title
+    height: 5rem; // Set a specific height, or adjust as necessary
+  }
+}
+
+@media (max-width: 62em) {
+  .form-main-inputs-title {
+    h3 {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .form-main {
+    padding-right: 0;
+  }
+
+  .form-main-container {
+    grid-template-columns: 1fr;
+    .form-main-inputs {
+      order: 2;
+      padding: 0 2rem 2rem 2rem;
+    }
+  }
+
+  .form-main-inputs-title {
+    h3 {
+      font-size: 3.2rem;
+    }
+  }
+
+  .contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+  }
+}
+
+@media (max-width: 27em) {
+  .form-desc {
+    width: 100%;
+    p {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 24em) {
+  .form-main-content {
+    overflow: hidden;
+  }
+
+  .form-main-inputs {
+    padding: 0;
+  }
+}
+
+@media (max-width: 20em) {
+  .contact-info-list-item {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
