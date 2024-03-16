@@ -59,6 +59,18 @@ ul {
   list-style: none;
 }
 
+.bottom-border {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+  }
+}
+
 @media (max-width: 48em) {
   .btn--full:link,
   .btn--full:visited {

@@ -38,7 +38,8 @@ nav {
         color: #fff;
         font-size: 1.5rem;
         &:hover {
-          color: $primaryColor;
+          // color: $primaryColor;
+          color: $btnColor;
         }
       }
     }

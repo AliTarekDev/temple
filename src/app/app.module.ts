@@ -13,6 +13,11 @@ import { ProjectsPartiesComponent } from './components/projects-parties/projects
 import { DetailsComponent } from './components/details/details.component';
 import { HomeComponent } from './components/home/home.component';
 import { SharedModule } from './shared/shared.module';
+import { KarnkShowComponent } from './components/karnk-show/karnk-show.component';
+import { KarnakShowContentComponent } from './components/karnak-show-content/karnak-show-content.component';
+import { DescriptionVedioComponent } from './components/description-vedio/description-vedio.component';
+import { ShowPricesComponent } from './components/show-prices/show-prices.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +31,11 @@ import { SharedModule } from './shared/shared.module';
     ProjectsPartiesComponent,
     DetailsComponent,
     HomeComponent,
+    KarnkShowComponent,
+    KarnakShowContentComponent,
+    DescriptionVedioComponent,
+    ShowPricesComponent,
+    CommentsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],

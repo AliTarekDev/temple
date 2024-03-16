@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { KarnkShowComponent } from './components/karnk-show/karnk-show.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,6 +15,10 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: () =>
       import('./contact-us/contact-us.module').then((m) => m.ContactUsModule),
+  },
+  {
+    path: 'karnak-show',
+    component: KarnkShowComponent,
   },
   // { path: '**', component: NotFoundComponent }
 ];
