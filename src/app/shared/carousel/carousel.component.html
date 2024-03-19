@@ -1,0 +1,41 @@
+<section class="carousel mr-top">
+  <div class="container">
+    <div class="carousel-header">
+      <img src="./assets/images/karnak/calender.png" alt="calender" />
+      <h3>{{ title }}</h3>
+    </div>
+
+    <div class="carousel-content mr-top">
+      <div class="carousel-content-date">
+        <p>من 13 الي 19 مارس</p>
+      </div>
+      <owl-carousel-o
+        [options]="customOptions"
+        (translated)="isActive($event)"
+        #owlCarousel
+      >
+        <ng-container
+          class="mt-5"
+          *ngFor="let slide of carouselItems; let i = index"
+        >
+          <ng-template carouselSlide>
+            <div class="calender" [ngClass]="{ isActive: i === activeIndex }">
+              <h4>{{ slide.date }}</h4>
+              <ul class="calender-list">
+                <li class="calender-list-item" *ngFor="let item of slide.items">
+                  <span>{{ item.time }}</span>
+                  <span>{{ item.lang }}</span>
+                </li>
+
+                <!-- <li class="calender-list-item">
+                      <span>7:00 مساء</span>
+                      <span>الاسبانية</span>
+                    </li> -->
+              </ul>
+            </div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>
