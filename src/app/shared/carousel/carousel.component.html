@@ -14,10 +14,7 @@
         (translated)="isActive($event)"
         #owlCarousel
       >
-        <ng-container
-          class="mt-5"
-          *ngFor="let slide of carouselItems; let i = index"
-        >
+        <ng-container *ngFor="let slide of carouselItems; let i = index">
           <ng-template carouselSlide>
             <div class="calender" [ngClass]="{ isActive: i === activeIndex }">
               <h4>{{ slide.date }}</h4>

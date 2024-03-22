@@ -18,6 +18,8 @@ import { KarnakShowContentComponent } from './components/karnak-show-content/kar
 import { DescriptionVedioComponent } from './components/description-vedio/description-vedio.component';
 import { ShowPricesComponent } from './components/show-prices/show-prices.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { VirtualRealityDisplayComponent } from './components/virtual-reality-display/virtual-reality-display.component';
+import { VirtualRealityContentComponent } from './components/virtual-reality-content/virtual-reality-content.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { CommentsComponent } from './components/comments/comments.component';
     DescriptionVedioComponent,
     ShowPricesComponent,
     CommentsComponent,
+    VirtualRealityDisplayComponent,
+    VirtualRealityContentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],

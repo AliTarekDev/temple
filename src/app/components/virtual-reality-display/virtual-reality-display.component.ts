@@ -1,35 +1,26 @@
-import {
-  Component,
-  ElementRef,
-  EventEmitter,
-  OnInit,
-  Output,
-  Renderer2,
-} from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { BackgroundService } from 'src/app/services/background.service';
 import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
-  selector: 'app-karnk-show',
-  templateUrl: './karnk-show.component.html',
-  styleUrls: ['./karnk-show.component.scss'],
+  selector: 'app-virtual-reality-display',
+  templateUrl: './virtual-reality-display.component.html',
+  styleUrls: ['./virtual-reality-display.component.scss'],
 })
-export class KarnkShowComponent implements OnInit {
-  title: string = 'المواعيد';
-  // @Output() carouselData: EventEmitter<any> = new EventEmitter();
-  carouselDataList: any = [];
+export class VirtualRealityDisplayComponent implements OnInit, OnDestroy {
+  carouselDataList: any[] = [];
   constructor(
-    private renderer: Renderer2,
     private el: ElementRef,
     private scrollService: ScrollService,
     private _backgroundService: BackgroundService
   ) {}
+
   ngOnInit(): void {
     const position = this.el.nativeElement.offsetTop;
     this.scrollService.setSectionStart(600);
 
     this._backgroundService.setBodyBackground(
-      './assets/images/contact/contact-landing.png'
+      './assets/images/virtual-reality/body.png'
     );
 
     this.carouselDataList = [
@@ -100,12 +91,7 @@ export class KarnkShowComponent implements OnInit {
       },
     ];
   }
-
   ngOnDestroy(): void {
     this._backgroundService.resetBodyBackground();
   }
-
-  // activeCarouselData(e: any) {
-  //   this.carouselData.emit(this.carouselDataList);
-  // }
 }

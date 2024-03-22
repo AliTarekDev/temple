@@ -103,6 +103,7 @@
   &-date {
     font-size: 3.6rem;
     font-weight: 500;
+    padding-bottom: 4.8rem;
   }
 }
 
@@ -124,7 +125,7 @@
 
 ::ng-deep .owl-prev,
 ::ng-deep .owl-next {
-  //   position: absolute;
+  position: absolute;
   background: #fff !important;
   border-radius: 50% !important;
   width: 40px;
@@ -140,11 +141,14 @@
 }
 
 ::ng-deep .owl-prev {
-  //   right: -300px !important;
+  // right: -300px !important;
+  top: -70px;
 }
 
 ::ng-deep .owl-next {
   //   right: -50px !important;
+  right: -355px;
+  top: -70px;
 }
 
 .isActive {
@@ -159,4 +163,67 @@ ng-deep .owl-carousel .owl-stage {
 
 ::ng-deep .owl-carousel .owl-stage-outer {
   overflow: visible;
+}
+
+@media (max-width: 48em) {
+  ::ng-deep .owl-nav {
+    // position: relative;
+    right: 0;
+    top: -55px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  ::ng-deep .owl-next,
+  ::ng-deep .owl-prev {
+    position: static !important;
+    // top: -20px;
+  }
+}
+
+@media (max-width: 31em) {
+  .calender {
+    width: 180px;
+  }
+}
+
+@media (max-width: 27em) {
+  .carousel-content-date {
+    // padding-right: 15px;
+
+    p {
+      font-size: 2.4rem;
+      text-align: center;
+    }
+  }
+  .carousel-header {
+    width: 100%;
+    img {
+      width: 30px;
+    }
+    h3 {
+      font-size: 3.2rem;
+    }
+  }
+
+  ::ng-deep .owl-nav {
+    position: relative !important;
+    display: none !important;
+  }
+
+  // ::ng-deep .owl-next {
+  //   position: relative;
+  //   // right: -260px !important;
+  // }
+
+  // ::ng-deep .owl-prev {
+  //   // right: 20px;
+  //   position: relative;
+  // }
+}
+
+@media (max-width: 24em) {
+  .calender {
+    width: 150px;
+  }
 }

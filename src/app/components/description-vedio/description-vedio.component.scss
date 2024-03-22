@@ -40,3 +40,21 @@
     }
   }
 }
+
+@media (max-width: 27em) {
+  .desc-vedio-title {
+    width: 100% !important;
+    img {
+      width: 30px !important;
+    }
+    h3 {
+      font-size: 3.2rem !important;
+    }
+  }
+
+  .desc-vedio-content {
+    .player {
+      transform: translate(-50%, -50%) !important;
+    }
+  }
+}
