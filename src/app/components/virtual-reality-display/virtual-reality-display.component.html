@@ -1,11 +1,26 @@
 <!-- <app-virtual-reality-header></app-virtual-reality-header> -->
-<div class="virtual-reality">
+<div class="virtual-reality" #virtualRealitySection>
   <div class="virtual-reality-header">
     <img src="./assets/images/virtual-reality/header.png" alt="karnak-show" />
   </div>
 </div>
 
-<app-virtual-reality-content></app-virtual-reality-content>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-12">
+      <app-virtual-reality-content></app-virtual-reality-content>
+    </div>
+
+    <div class="col-lg-4">
+      <img
+        src="./assets/images/widget.png"
+        alt="widget"
+        class="sticky-image"
+        #stickyImg
+      />
+    </div>
+  </div>
+</div>
 <app-description-vedio></app-description-vedio>
 <app-carousel
   [title]="'المواعيد'"

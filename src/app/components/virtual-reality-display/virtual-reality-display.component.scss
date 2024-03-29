@@ -6,3 +6,21 @@
     }
   }
 }
+
+.sticky-image {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Sticky state */
+.sticky-image.show {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}

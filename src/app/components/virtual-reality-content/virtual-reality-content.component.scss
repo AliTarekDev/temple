@@ -5,7 +5,7 @@
   &-header {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     align-items: center;
     position: relative;
     margin-bottom: 4.8rem;
@@ -93,6 +93,19 @@
       p {
         margin: 0;
       }
+    }
+  }
+}
+// @media (max-width: 75em) {
+//   .virtaul-header {
+//     width: 100% !important;
+//   }
+// }
+
+@media (max-width: 62em) {
+  .virtaul {
+    &-header {
+      width: 80% !important;
     }
   }
 }

@@ -13,7 +13,6 @@ export class ScrollService {
 
   emitScrollYPosition(yPosition: number) {
     this.onScroll.emit(yPosition);
-    console.log(yPosition);
   }
 
   setSectionStart(position: number) {
