@@ -18,9 +18,9 @@ export class DetailsComponent implements OnInit {
       src: './assets/images/show-pyramids.png',
       alt: 'Overlay 1',
       top: '20%',
-      right: '-5%',
+      right: '-12%',
       left: 'auto',
-      width: '20%',
+      width: '40%',
       height: 'auto',
       svgAfterImage: true,
       title: 'عرض الاهرامات',
@@ -32,8 +32,8 @@ export class DetailsComponent implements OnInit {
       alt: 'Overlay 1',
       top: '30%',
       right: 'auto',
-      left: '-5%',
-      width: '20%',
+      left: '-12%',
+      width: '40%',
       height: 'auto',
       svgAfterImage: false,
     },
@@ -42,9 +42,9 @@ export class DetailsComponent implements OnInit {
       src: './assets/images/edfo.png',
       alt: 'Overlay 1',
       top: '40%',
-      right: '-5%',
+      right: '-12%',
       left: 'auto',
-      width: '20%',
+      width: '40%',
       height: 'auto',
       svgAfterImage: true,
     },
@@ -54,8 +54,8 @@ export class DetailsComponent implements OnInit {
       alt: 'Overlay 1',
       top: '50%',
       right: 'auto',
-      left: '-5%',
-      width: '20%',
+      left: '-12%',
+      width: '40%',
       height: 'auto',
       svgAfterImage: false,
     },
@@ -63,9 +63,9 @@ export class DetailsComponent implements OnInit {
       src: './assets/images/abo-sembel.png',
       alt: 'Overlay 1',
       top: '60%',
-      right: '-5%',
+      right: '-12%',
       left: 'auto',
-      width: '20%',
+      width: '40%',
       height: 'auto',
       svgAfterImage: true,
     },
@@ -94,6 +94,15 @@ export class DetailsComponent implements OnInit {
   }
   adjustImagePositions() {
     const width = window.innerWidth;
+
+    // if (width <= 2560) {
+    //   this.overlayImages = this.overlayImages.map((image) => ({
+    //     ...image,
+    //     left: image.left == 'auto' ? 'auto' : '-12%',
+    //     right: image.right == 'auto' ? 'auto' : '-12%',
+    //   }));
+    // } else
+
     if (width <= 767) {
       this.overlayImages = this.overlayImages.map((image) => ({
         ...image,
@@ -103,8 +112,8 @@ export class DetailsComponent implements OnInit {
     } else {
       this.overlayImages = this.overlayImages.map((image) => ({
         ...image,
-        left: image.left == 'auto' ? 'auto' : '-5%',
-        right: image.right == 'auto' ? 'auto' : '-5%',
+        left: image.left == 'auto' ? 'auto' : '-12%',
+        right: image.right == 'auto' ? 'auto' : '-12%',
       }));
     }
 

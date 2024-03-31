@@ -49,13 +49,13 @@ p {
       width: 100%;
     }
   }
-  .divider {
-    position: absolute;
-    bottom: -45px;
-    left: 0;
-    width: 100%;
-    z-index: -3;
-  }
+  // .divider {
+  //   position: absolute;
+  //   bottom: -45px;
+  //   left: 0;
+  //   width: 100%;
+  //   z-index: -3;
+  // }
   .box-content {
     position: absolute;
     color: #fff;
@@ -66,23 +66,27 @@ p {
   }
 }
 
-@media (max-width: 75em) {
-  .divider {
-    bottom: -40px !important;
-  }
-}
+// .divider-img {
+//   transform: translateY(0);
+// }
 
-@media (max-width: 66em) {
-  .divider {
-    bottom: -35px !important;
-  }
-}
+// @media (max-width: 75em) {
+//   .divider {
+//     bottom: -40px !important;
+//   }
+// }
 
-@media (max-width: 58em) {
-  .divider {
-    bottom: -30px !important;
-  }
-}
+// @media (max-width: 66em) {
+//   // .divider {
+//   //   bottom: -35px !important;
+//   // }
+// }
+
+// @media (max-width: 58em) {
+//   // .divider {
+//   //   bottom: -30px !important;
+//   // }
+// }
 
 @media (max-width: 58em) {
   .box-content {
@@ -95,9 +99,9 @@ p {
   h2 {
     font-size: 3.2rem;
   }
-  .divider {
-    bottom: -35px !important;
-  }
+  // .divider {
+  //   bottom: -35px !important;
+  // }
 
   .img-box {
     display: none !important;
@@ -112,10 +116,10 @@ p {
   }
 }
 
-@media (max-width: 38em) {
-  .divider {
-  }
-}
+// @media (max-width: 38em) {
+//   .divider {
+//   }
+// }
 
 @media (max-width: 20em) {
   h2 {

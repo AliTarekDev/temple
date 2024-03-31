@@ -1,13 +1,16 @@
 @use "../../styles/variables" as *;
 
+.container {
+  position: relative;
+}
 .details {
   .details-main-img {
     margin: auto;
     text-align: center;
-    position: relative;
-    width: 100%; /* Adjust as needed */
-    max-width: 600px; /* Example max width */
-    margin: auto; /* Center the container */
+    // position: relative;
+    width: 100%;
+    // max-width: 600px;
+    margin: auto;
   }
 }
 
@@ -30,7 +33,8 @@
 }
 
 .overlay-image img {
-  width: 200px;
+  // width: 200px;
+  max-width: 40%;
   height: auto;
 }
 
@@ -181,7 +185,26 @@
 }
 
 .line {
-  width: 100px !important;
+  width: 230px !important;
+}
+
+.modal.show {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.divider-image {
+  transform: translateY(-50%) !important;
+  position: relative !important;
+  z-index: -1 !important;
+}
+@media (max-width: 90em) {
+  // .line {
+  //   width: 325px !important;
+  // }
+  // .overlay-content {
+  //   justify-content: flex-start;
+  // }
 }
 
 @media (max-width: 43em) {

@@ -340,7 +340,7 @@
 
   .img-box {
     position: relative;
-    top: -12rem;
+    top: -5%;
     left: 0;
     z-index: -1;
   }
@@ -479,6 +479,12 @@
     }
   }
 }
+
+// .divider-img {
+//   transform: translateY(-50%);
+//   position: relative;
+//   z-index: -1;
+// }
 
 @media (max-width: 28em) {
   .citadel-show-container {
