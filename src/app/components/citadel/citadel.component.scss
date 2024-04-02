@@ -66,6 +66,12 @@ p {
   }
 }
 
+.divider-image {
+  transform: translateY(-50%) !important;
+  position: relative !important;
+  z-index: -1 !important;
+}
+
 // .divider-img {
 //   transform: translateY(0);
 // }

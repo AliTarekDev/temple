@@ -28,8 +28,8 @@
 
 .overlay-image {
   position: absolute;
-  width: auto; /* Adjust based on your needs */
-  height: auto; /* Adjust based on your needs */
+  width: auto;
+  height: auto;
 }
 
 .overlay-image img {
@@ -45,6 +45,7 @@
   gap: 10px;
 }
 
+/**modal*/
 .modal-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -198,25 +199,40 @@
   position: relative !important;
   z-index: -1 !important;
 }
-@media (max-width: 90em) {
-  // .line {
-  //   width: 325px !important;
-  // }
-  // .overlay-content {
-  //   justify-content: flex-start;
-  // }
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100% !important;
 }
 
-@media (max-width: 43em) {
+@media (max-width: 75em) {
   .line {
-    display: none;
+    max-width: 21% !important;
   }
 }
+
+@media (max-width: 62em) {
+  .line {
+    max-width: 15% !important;
+  }
+}
+
+@media (max-width: 48em) {
+  .line {
+    max-width: 10% !important;
+  }
+}
+
 @media (max-width: 27em) {
   .overlay-content {
     img {
       width: 150px !important;
     }
+  }
+
+  .line {
+    max-width: 20% !important;
   }
 }
 

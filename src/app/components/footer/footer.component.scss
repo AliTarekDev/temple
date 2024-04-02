@@ -2,80 +2,78 @@
 
 footer {
   padding: 4.8rem 0;
+  color: #fff;
 
-  .footer-container {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-    gap: 1.2rem;
-    color: #fff;
+  // display: grid;
+  // grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  // gap: 1.2rem;
 
-    h3 {
-      font-size: 3.2rem;
-      margin-bottom: 1.8rem;
+  h3 {
+    font-size: 3.2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .about-us {
+    &-content {
+      font-size: 1.2rem;
     }
 
-    .about-us {
-      &-content {
-        font-size: 1.2rem;
-      }
+    .more {
+      color: #fff;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: $footerSecondary;
+    }
+  }
 
-      .more {
-        color: #fff;
+  .offers {
+    &-list {
+      li {
         font-size: 1.2rem;
-        text-decoration: none;
-        color: $footerSecondary;
+        margin-bottom: 1.2rem;
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          color: $footerSecondary;
+        }
       }
     }
+  }
 
-    .offers {
-      &-list {
-        li {
-          font-size: 1.2rem;
-          margin-bottom: 1.2rem;
+  .links {
+    &-list {
+      li {
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+        a {
+          color: #fff;
+          text-decoration: none;
           transition: all 0.5s ease-in-out;
-          cursor: pointer;
           &:hover {
             color: $footerSecondary;
           }
         }
       }
     }
+  }
 
-    .links {
-      &-list {
-        li {
-          font-size: 1.2rem;
-          margin-bottom: 1.2rem;
-          a {
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.5s ease-in-out;
-            &:hover {
-              color: $footerSecondary;
-            }
-          }
+  .contact-list {
+    li {
+      margin-bottom: 1.8rem;
+      .list-box {
+        height: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        i {
+          color: $footerIconColor;
+          font-size: 1.8rem;
+        }
+        p {
+          margin: 0;
         }
       }
-    }
-
-    .contact-list {
-      li {
-        margin-bottom: 1.8rem;
-        .list-box {
-          height: 1.2rem;
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          i {
-            color: $footerIconColor;
-            font-size: 1.8rem;
-          }
-          p {
-            margin: 0;
-          }
-        }
-        font-size: 1.2rem;
-      }
+      font-size: 1.2rem;
     }
   }
 }
@@ -102,45 +100,45 @@ footer {
   }
 }
 
-@media (max-width: 62em) {
-  .footer-container {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 3rem !important;
-  }
-}
+// @media (max-width: 62em) {
+//   .footer-container {
+//     grid-template-columns: repeat(3, 1fr) !important;
+//     gap: 3rem !important;
+//   }
+// }
 
-@media (max-width: 38em) {
-  .footer-container {
-    grid-template-columns: 1fr 1fr !important;
-  }
+// @media (max-width: 38em) {
+//   .footer-container {
+//     grid-template-columns: 1fr 1fr !important;
+//   }
 
-  .footer-container {
-    .grid-item:first-child {
-      grid-column: span 2;
-    }
-  }
+//   .footer-container {
+//     .grid-item:first-child {
+//       grid-column: span 2;
+//     }
+//   }
 
-  .copy--right {
-    flex-direction: column;
-  }
-}
+//   .copy--right {
+//     flex-direction: column;
+//   }
+// }
 
-@media (max-width: 24em) {
-  .footer-container {
-    // grid-template-columns: repeat(3, 1fr) !important;
-    gap: 0 !important;
-  }
-}
+// @media (max-width: 24em) {
+//   .footer-container {
+//     // grid-template-columns: repeat(3, 1fr) !important;
+//     gap: 0 !important;
+//   }
+// }
 
-@media (max-width: 22em) {
-  .footer-container {
-    grid-template-columns: repeat(1, 1fr) !important;
-    gap: 3rem !important;
-  }
+// @media (max-width: 22em) {
+//   .footer-container {
+//     grid-template-columns: repeat(1, 1fr) !important;
+//     gap: 3rem !important;
+//   }
 
-  .footer-container {
-    .grid-item:first-child {
-      grid-column: span 1;
-    }
-  }
-}
+//   .footer-container {
+//     .grid-item:first-child {
+//       grid-column: span 1;
+//     }
+//   }
+// }

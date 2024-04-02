@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   Component,
   ElementRef,
   HostListener,
@@ -14,7 +15,9 @@ import { ScrollService } from 'src/app/services/scroll.service';
   templateUrl: './virtual-reality-display.component.html',
   styleUrls: ['./virtual-reality-display.component.scss'],
 })
-export class VirtualRealityDisplayComponent implements OnInit, OnDestroy {
+export class VirtualRealityDisplayComponent
+  implements OnInit, OnDestroy, AfterViewInit
+{
   @ViewChild('secondSection') secondSection!: ElementRef<any>;
 
   carouselDataList: any[] = [];
@@ -101,30 +104,66 @@ export class VirtualRealityDisplayComponent implements OnInit, OnDestroy {
     ];
   }
 
-  @ViewChild('virtualRealitySection') virtualRealitySection!: ElementRef;
+  @ViewChild('stickyImgContainer') stickyImgContainer!: ElementRef;
   @ViewChild('stickyImg') stickyImg!: ElementRef;
 
-  @HostListener('window:scroll', ['$event'])
-  checkScroll() {
-    const virtualRealitySectionTop =
-      this.virtualRealitySection.nativeElement.offsetTop;
-    const virtualRealitySectionHeight =
-      this.virtualRealitySection.nativeElement.offsetHeight;
-    const windowHeight = window.innerHeight;
-    const scrollPosition = window.scrollY;
+  stickyImgOffsetTop: number = 0;
+  stickyImgContainerHeight: number = 0;
+  stickyImgHeight: number = 0;
 
-    // Calculate the position when the end of the virtual-reality section is reached
-    const endOfVirtualRealitySection =
-      virtualRealitySectionTop + virtualRealitySectionHeight - windowHeight;
+  ngAfterViewInit() {
+    this.stickyImgOffsetTop = this.stickyImgContainer.nativeElement.offsetTop;
+    this.stickyImgContainerHeight =
+      this.stickyImgContainer.nativeElement.offsetHeight;
+    this.stickyImgHeight = this.stickyImg.nativeElement.offsetHeight;
+  }
 
-    // If scrolled to the end of the virtual-reality section, show the sticky image
-    if (scrollPosition >= windowHeight - 300) {
-      // this.stickyImg.nativeElement.style.display = 'block';
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+    const stickyImgBottomOffset =
+      this.stickyImgOffsetTop +
+      this.stickyImgContainerHeight -
+      this.stickyImgHeight;
+
+    if (
+      scrollTop > this.stickyImgOffsetTop &&
+      scrollTop < stickyImgBottomOffset
+    ) {
       this.stickyImg.nativeElement.classList.add('show');
     } else {
       this.stickyImg.nativeElement.classList.remove('show');
     }
   }
+
+  // @ViewChild('virtualRealitySection') virtualRealitySection!: ElementRef;
+  // @ViewChild('stickyImg') stickyImg!: ElementRef;
+
+  // @HostListener('window:scroll', ['$event'])
+  // checkScroll() {
+  //   const virtualRealitySectionTop =
+  //     this.virtualRealitySection.nativeElement.offsetTop;
+  //   const virtualRealitySectionHeight =
+  //     this.virtualRealitySection.nativeElement.offsetHeight;
+  //   const windowHeight = window.innerHeight;
+  //   const scrollPosition = window.scrollY;
+
+  //   // Calculate the position when the end of the virtual-reality section is reached
+  //   const endOfVirtualRealitySection =
+  //     virtualRealitySectionTop + virtualRealitySectionHeight - windowHeight;
+
+  //   // If scrolled to the end of the virtual-reality section, show the sticky image
+  //   if (scrollPosition >= windowHeight - 300) {
+  //     // this.stickyImg.nativeElement.style.display = 'block';
+  //     this.stickyImg.nativeElement.classList.add('show');
+  //   } else {
+  //     this.stickyImg.nativeElement.classList.remove('show');
+  //   }
+  // }
 
   ngOnDestroy(): void {
     this._backgroundService.resetBodyBackground();

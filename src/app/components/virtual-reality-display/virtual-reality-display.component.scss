@@ -22,5 +22,9 @@
   opacity: 1;
   visibility: visible;
   display: block;
-  z-index: 1000; /* Ensure it stays on top of other content */
+  z-index: 1000;
+}
+
+::ng-deep .reach {
+  margin-bottom: 4.8rem !important;
 }
